@@ -20,5 +20,5 @@ El sistema centraliza las preguntas más comunes de los estudiantes a través de
 ### Pasos de ejecución
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/TuUsuario/TuRepositorio.git](https://github.com/TuUsuario/TuRepositorio.git)
-   cd TuRepositorio
+   [git clone [https://github.com/TuUsuario/TuRepositorio.git](https://github.com/TuUsuario/TuRepositorio.git)
+   cd TuRepositorio](https://github.com/CarMC26/Proyecto_Final_Fundamentos_de_Programacion)
