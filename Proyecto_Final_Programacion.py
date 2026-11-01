@@ -2,123 +2,130 @@ def menu_opciones(opcion):
     #Funciona como barra de opciones
     print("Menú General")
     print("")
-    print("1. Ubicación")
-    print("2. Uso de aplicaciones")
-    print("3. Profesores")
-    print("4. Becas")
-    print("5. Intercambios")
-    print("6. Semana Tec")
-    print("7. Asesoramiento")
-    print("8. Ninguna")
+    menu = [
+        '1. Ubicación', 
+        '2. Uso de aplicaciones',
+        "3. Profesores",
+        "4. Becas",
+        "5. Intercambios",
+        "6. Semana Tec",
+        "7. Asesoramiento",
+        "8. Otros",
+        "9. Ninguna"
+    ]
+    for op in menu:
+        print(op)
     print("")
     opcion = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
     print("")
     return opcion
 
-def menu_ubicacion():
-    #Son las diferentes opciones de respuesta respecto a este tema
-    print("Menu de ubicacion")
-    print("")
-    print("1. ¿No encuentras tu salón?")
-    print("2. ¿No sabes dónde está un edificio?")
-    print("3. ¿No sabes cómo llegar a algún lugar?")
-    print("4. ¿No sabes dónde está algo dentro del campus?")
-    print("5. Otros")
-    print("6. Regresar a menú general")
-    print("")
-    return
+def preguntas(opcion):
+    #Sirve para guardar todas las preguntas en una sola matriz 
 
-def menu_aplicaciones():
-    print("Menú aplicaciones")
-    print()
-    print("1. ¿Tienes dudas sobre mi Tec?")
-    print("2. ¿Tienes dudas sobre Canvas?")
-    print("3. ¿Tienes dudas sobre Outlook?")
-    print("4. ¿Tienes dudas sobre Tec trasporte?")
-    print("5. ¿Tienes dudas sobre mi Tec celular?")
-    print("6. Otros")
-    print("7. Regresar a menú general")
-    print()
-    return
-
-def menu_profesores():
-    print("Menú profesores")
-    print()
-    print("1. ¿No sabes donde puedes ver la información para contactar a tu profesor?")
-    print("2. ¿No sabes que profesor te toco?")
-    print("3. ¿No sabes cómo hablar con tu profesor?")
-    print("4. Otros")
-    print("5. Regresar a menú general")
-    print()
-    return
+    preguntas = [
+        [
+            "¿No encuentras tu salón?",
+            "¿No sabes dónde está un edificio?",
+            "¿No sabes cómo llegar a algún lugar?",
+            "¿No sabes dónde está algo dentro del campus?",
+            "Otros",
+            "Regresar a menú general"
+        ],
+        [
+            "¿Tienes dudas sobre mi Tec?",
+            "¿Tienes dudas sobre Canvas?",
+            "¿Tienes dudas sobre Outlook?",
+            "¿Tienes dudas sobre Tec trasporte?",
+            "¿Tienes dudas sobre mi Tec celular?",
+            "Otros",
+            "Regresar a menú general"
+        ],
+        [
+            "¿No sabes donde puedes ver la información para contactar a tu profesor?",
+            "¿No sabes que profesor te toco?",
+            "¿No sabes cómo hablar con tu profesor?",
+            "Otros",
+            "Regresar a menú general"
+        ],
+        [
+            "¿Qué tipos de beca existen?",
+            "¿Cuáles son los requisitos para obtener una?",
+            "¿Cómo y cuándo se solicita la beca?",
+            "¿No sabes qué documentos debes entregar?",
+            "¿No sabes cómo funciona la asignacion de área/proyecto de Servicio Becario?",
+            "¿No sabes si puedes cambiar de horario o de área?",
+            "Otros",
+            "Regresar a menú general"
+        ],
+        [
+            "¿No sabes qué programas internacionales existen y cuál te conviene?",
+            "¿No sabes cuáles son los requisitos para participar (promedio, créditos, idioma)?",
+            "¿No sabes cómo y cuándo postularte (convocatorias y fechas límite)?",
+            "¿No sabes qué documentos suelen pedir para tu solicitud?",
+            "¿No sabes cómo se revalidan materias o se acreditan los créditos?",
+            "¿No sabes si puedes usar tu beca y/o financiamiento durante el programa?",
+            "Otros",
+            "Regresar a menú general"
+        ],
+        [
+            "¿No sabes qué es Semana Tec?",
+            "¿No sabes cuándo te toca Semana Tec?",
+            "¿No sabes qué pasa si el cupo se llena?",
+            "¿No sabes si puedes cambiarte de Semana Tec?",
+            "¿No sabes cómo se evalúa?",
+            "¿No sabes qué pasa si faltas o no entregas un trabajo?",
+            "Otros",
+            "Regresar a menú general"
+        ],
+        [
+            "¿No sabes con quién asesorarte sobre tu carrera?",
+            "¿No sabes dónde ver las asesorías de profesores?",
+            "¿No sabes a qué asesorías externas puedes acudir?",
+            "¿No sabes dónde buscar oportunidades?",
+            "¿No sabes qué hacer si necesitas orientación?",
+            "Otros",
+            "Regresar a menú general"
+        ]
+    ]
     
-def menu_becas():
-    print("Menú becas")
-    print()
-    print("1. ¿Qué tipos de beca existen?")
-    print("2. ¿Cuáles son los requisitos para obtener una?")
-    print("3. ¿Cómo y cuándo se solicita la beca?")
-    print("4. ¿No sabes qué documentos debes entregar?")
-    print("5. ¿No sabes cómo funciona la asignacion de área/proyecto de Servicio Becario?")
-    print("6. ¿No sabes si puedes cambiar de horario o de área?")
-    print("7. Otros")
-    print("8. Regresar a menú general")
-    print()
-    return
-
-def menu_semana_tec():
-    print("Menú Semana Tec")
-    print()
-    print("1. ¿No sabes qué es Semana Tec?")
-    print("2. ¿No sabes cuándo te toca Semana Tec?")
-    print("3. ¿No sabes qué pasa si el cupo se llena?")
-    print("4. ¿No sabes si puedes cambiarte de Semana Tec?")
-    print("5. ¿No sabes cómo se evalúa?")
-    print("6. ¿No sabes qué pasa si faltas o no entregas un trabajo?")
-    print("7. Otros")
-    print("8. Regresar a menú general")
-    print()
-    return
-
-def menu_interacional():
-    print("Menú Programas Internacionales")
-    print()
-    print("1. ¿No sabes qué programas internacionales existen y cuál te conviene?")
-    print("2. ¿No sabes cuáles son los requisitos para participar (promedio, créditos, idioma)?")
-    print("3. ¿No sabes cómo y cuándo postularte (convocatorias y fechas límite)?")
-    print("4. ¿No sabes qué documentos suelen pedir para tu solicitud?")
-    print("5. ¿No sabes cómo se revalidan materias o se acreditan los créditos?")
-    print("6. ¿No sabes si puedes usar tu beca y/o financiamiento durante el programa?")
-    print("7. Otros")
-    print("8. Regresar a menú general")
-    print()
-    return
+    return preguntas[opcion - 1]
 
 
-def menu_asesoramiento():
-    print("Menú Asesoramiento")
-    print()
-    print("1. ¿No sabes con quién asesorarte sobre tu carrera?")
-    print("2. ¿No sabes dónde ver las asesorías de profesores?")
-    print("3. ¿No sabes a qué asesorías externas puedes acudir?")
-    print("4. ¿No sabes dónde buscar oportunidades?")
-    print("5. ¿No sabes qué hacer si necesitas orientación?")
-    print("6. Otros")
-    print("7. Regresar a menú general")
-    print()
-    return
+def guardar_en_historial(historial, categoria, seleccion):
+    #Crea una matriz donde guarda todas las preguntas ya hechas
+    matriz = preguntas()
+    if 1 <= categoria <= len(matriz) and 1 <= seleccion <= len(matriz[categoria - 1]):
+        historial.append(matriz[categoria - 1][seleccion - 1])
 
+def buscar_preguntas(texto, preguntas):
+    #Funciona como un buscador que busca palabras clave dentro de la matriz de preguntas
+    palabras = texto.lower().split()
+    resultados = []
+
+    for menu in preguntas:
+        for pregunta in menu:
+            pregunta_minuscula = pregunta.lower()
+
+            if any(palabra in pregunta_minuscula for palabra in palabras):
+                resultados.append(pregunta)
+
+    return resultados
 
 def main():
+    historial = []
     opcion = 0
     opcion = menu_opciones(opcion)
-    while opcion < 8:
+    while opcion < 9 and opcion >= 1:
         #Funciona como un almacenador de infromacion ademas de que permite preguntar mas de una ves 
         match opcion:
             case 1:
                 #Funciona para resolver cada caso particularmente 
-                menu_ubicacion()
+                print("Menú de ubicación")
+                preguntas(opcion)
                 opcion_ubicacion = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+                guardar_en_historial(historial, opcion, opcion_ubicacion)
                 if opcion_ubicacion <= 6:
                     #Funciona para no recibir valores erroneos
                     match opcion_ubicacion:
@@ -140,14 +147,19 @@ def main():
                     print()
                     print("Seleccione una de las opciones")
                     print()
-                    menu_ubicacion()
+                    preguntas(opcion)
                     opcion_ubicacion = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
                
                        
                        
+
+                    guardar_en_historial(historial, opcion, opcion_ubicacion)
             case 2:
-                menu_aplicaciones()
+                print("Menú de aplicaciones")
+                preguntas(opcion)
                 opcion_applicacion = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+                guardar_en_historial(historial, opcion, opcion_applicacion)
                 if opcion_applicacion <= 7:
                     match opcion_applicacion:
                         case 1:
@@ -169,12 +181,18 @@ def main():
                     print()
                     print("Seleccione una de las opciones")
                     print()
-                    menu_aplicaciones()
+                    print("Menú de aplicaciones")
+                    preguntas(opcion)
                     opcion_applicacion = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
                     
+
+                    guardar_en_historial(historial, opcion, opcion_applicacion)
             case 3:
-                menu_profesores()
+                print("Menú de profesores")
+                preguntas(opcion)
                 opcion_profesores = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+                guardar_en_historial(historial, opcion, opcion_profesores)
                 if opcion_profesores <= 5:
                     match opcion_profesores:
                         case 1:
@@ -192,12 +210,18 @@ def main():
                     print()
                     print("Seleccione una de las opciones")
                     print()
-                    menu_profesores()
+                    print("Menú de profesores")
+                    preguntas(opcion)
                     opcion_profesores = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
 
+
+                    guardar_en_historial(historial, opcion, opcion_profesores)
             case 4:
-                menu_becas()
+                print("Menú de becas")
+                preguntas(opcion)
                 opcion_becas = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+                guardar_en_historial(historial, opcion, opcion_becas)
                 if opcion_becas <= 8:
                     match opcion_becas:
                         case 1:
@@ -221,14 +245,20 @@ def main():
                     print(" ")
                     print("Seleccione una de las opciones")
                     print()
-                    menu_becas()
+                    print("Menú de becas")
+                    preguntas(opcion)
                     opcion_becas = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
 
                 
                 
+
+                    guardar_en_historial(historial, opcion, opcion_becas)
             case 5:
-                menu_interacional()
+                print("Menú de intercambios")
+                preguntas(opcion)
                 opcion_Interacional = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+                guardar_en_historial(historial, opcion, opcion_Interacional)
                 if opcion_Interacional <= 8:
                     match opcion_Interacional:
                         case 1:
@@ -252,12 +282,18 @@ def main():
                     print()
                     print("Seleccione una de las opciones")
                     print()
-                    menu_interacional()
+                    print("Menú de intercambios")
+                    preguntas(opcion)
                     opcion_Interacional = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
                 
+
+                    guardar_en_historial(historial, opcion, opcion_Interacional)
             case 6:
-                menu_semana_tec()
+                print("Menú Semana Tec")
+                preguntas(opcion)
                 opcion_Semana_Tec = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+                guardar_en_historial(historial, opcion, opcion_Semana_Tec)
                 if opcion_Semana_Tec <= 8:
                     match opcion_Semana_Tec:
                         case 1:
@@ -281,14 +317,20 @@ def main():
                     print()
                     print("Seleccione una de las opciones")
                     print()
-                    menu_semana_tec()
+                    print("Menú Semana Tec")
+                    preguntas(opcion)
                     opcion_Semana_Tec = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
 
                     
 
+
+                    guardar_en_historial(historial, opcion, opcion_Semana_Tec)
             case 7:
-                menu_asesoramiento()
+                print("Menú Asesoramiento")
+                preguntas(opcion)
                 opcion_Asesoramiento = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+                guardar_en_historial(historial, opcion, opcion_Asesoramiento)
                 if opcion_Asesoramiento <= 7:
                     match opcion_Asesoramiento:
                         case 1:
@@ -310,17 +352,47 @@ def main():
                     print()
                     print("Seleccione una de las opciones")
                     print()
-                    menu_asesoramiento()
+                    print("Menú Asesoramiento")
+                    preguntas(opcion)
                     opcion_Asesoramiento = int(input("Selecciona el número que corresponda a la sección de tu pregunta: "))
+
+
+                    guardar_en_historial(historial, opcion, opcion_Asesoramiento)
+            case 8:
+                busqueda = input("¿Qué estás buscando? ")
+                historial.append("Búsqueda: " + busqueda)
+
+                resultados = buscar_preguntas(busqueda, preguntas())
+
+                if resultados:
+                    print("Encontré estas preguntas relacionadas:")
+                    for pregunta in resultados:
+                        print(pregunta)
+                else:
+                    print("No encontré preguntas relacionadas.")
+
                 
                 
                 
-    print()   
+    print()
+    #Funciona como historial para guardar preguntas 
+    if historial:
+        print("Historial de preguntas:")
+        for pregunta_hecha in historial:
+            print(pregunta_hecha)
     print("Espero haber resuelto tu duda")
-    #Funciona como cierre de la funcion While
+
                 
         
         
 main()
-print("GitHub: https://github.com/CarMC26/Proyecto-Final-.git")
-#https://github.com/CarMC26/Proyecto-Final-.git
+
+
+
+
+
+
+
+
+
+
